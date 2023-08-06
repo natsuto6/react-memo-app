@@ -17,11 +17,30 @@ function App() {
     setSelectedMemoIndex(memos.length);
   };
 
+  const handleMemoSave = (updateMemo) => {
+    const updateMemos = [...memos];
+    updateMemos[selectedMemoIndex] = updateMemo;
+    setMemos(updateMemos);
+  }
+
+  const handleMemoDelete = () => {
+    const updateMemos = [...memos];
+    updateMemos.splice(selectedMemoIndex, 1);
+    setMemos(updateMemos);
+    setSelectedMemoIndex(null);
+  }
+
   return (
     <>
       <h1>メモアプリ</h1>
       <MemoList memos={memos} onMemoSelect={handleMemoSelect} onMemoAdd={handleMemoAdd} />
-      {selectedMemoIndex !== null && <MemoDetail memo={memos[selectedMemoIndex]} />}
+      {selectedMemoIndex !== null && (
+        <MemoDetail
+          memo={memos[selectedMemoIndex]}
+          onMemoSave={handleMemoSave}
+          onMemoDelete={handleMemoDelete}
+        />
+      )}
     </>
   );
 }
