@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+}
+
+.memo-item {
+    cursor: pointer;
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+.memo-item:hover {
+    background-color: #eeeded;
+}
+
+textarea {
+    display: block;
+    width: 60%;
+    height: 100px;
+    margin-top: 20px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button.delete-button {
+    margin-left: 10px;
+}

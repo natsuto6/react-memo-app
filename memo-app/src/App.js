@@ -32,7 +32,6 @@ function App() {
 
   return (
     <>
-      <h1>メモアプリ</h1>
       <MemoList memos={memos} onMemoSelect={handleMemoSelect} onMemoAdd={handleMemoAdd} />
       {selectedMemoIndex !== null && (
         <MemoDetail
