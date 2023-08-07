@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 function MemoDetail({ memo, onMemoSave, onMemoDelete }) {
-  const [memoText, setMemoText] = useState(memo ? memo.text : '');
+  const [memoText, setMemoText] = useState(memo ? memo.text : "");
 
   const handleSave = () => {
-    onMemoSave({ ...memo, text: memoText});
+    onMemoSave({ ...memo, text: memoText });
   };
 
   return (
