@@ -1,7 +1,7 @@
 function MemoList({ memos, onMemoSelect, onMemoAdd }) {
   return (
     <>
-      {memos.map((memo, index) => (
+      {memos.map((memo) => (
         <div
           key={memo.id}
           onClick={() => onMemoSelect(memo.id)}
