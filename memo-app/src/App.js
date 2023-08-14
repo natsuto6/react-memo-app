@@ -12,7 +12,7 @@ function App() {
   };
 
   const handleMemoAdd = () => {
-    const newMemo = { text: "新規メモ" };
+    const newMemo = { id: memos.length, text: "新規メモ" };
     setMemos([...memos, newMemo]);
     setSelectedMemoIndex(memos.length);
   };

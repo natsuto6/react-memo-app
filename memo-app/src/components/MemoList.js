@@ -3,8 +3,8 @@ function MemoList({ memos, onMemoSelect, onMemoAdd }) {
     <>
       {memos.map((memo, index) => (
         <div
-          key={index}
-          onClick={() => onMemoSelect(index)}
+          key={memo.id}
+          onClick={() => onMemoSelect(memo.id)}
           className="memo-item"
         >
           {memo.text.split("\n")[0]}
