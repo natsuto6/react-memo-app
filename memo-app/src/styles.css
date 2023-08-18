@@ -35,3 +35,8 @@ button {
 button.delete-button {
   margin-left: 10px;
 }
+
+.login-button {
+  text-align: right;
+  padding: 10px 20px;
+}

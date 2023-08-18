@@ -5,6 +5,11 @@ function MemoList({ memos, onMemoSelect, onMemoAdd }) {
 
   return (
     <>
+      <div className="login-button">
+        <button onClick={loggedIn ? logout : login}>
+          {loggedIn ? "ログアウト" : "ログイン"}
+        </button>
+      </div>
       {memos.map((memo) => (
         <div
           key={memo.id}
@@ -14,9 +19,6 @@ function MemoList({ memos, onMemoSelect, onMemoAdd }) {
           {memo.text.split("\n")[0]}
         </div>
       ))}
-      <button onClick={loggedIn ? logout : login}>
-        {loggedIn ? "ログアウト" : "ログイン"}
-      </button>
       {loggedIn && <button onClick={onMemoAdd}>+</button>}
     </>
   );
