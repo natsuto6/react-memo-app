@@ -9,7 +9,7 @@ export function LoginProvider({ children }) {
   const logout = () => setLoggedIn(false);
 
   return (
-    <LoginContext.Provider value={{ loggedIn, login, logout}}>
+    <LoginContext.Provider value={{ loggedIn, login, logout }}>
       {children}
     </LoginContext.Provider>
   );
