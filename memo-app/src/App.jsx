@@ -1,8 +1,8 @@
 import { useState } from "react";
-import MemoList from "./components/MemoList";
-import MemoDetail from "./components/MemoDetail";
-import useLocalStorage from "./hooks/useLocalStorage";
-import { AuthProvider } from "./LoginContext";
+import MemoList from "./components/MemoList.jsx";
+import MemoDetail from "./components/MemoDetail.jsx";
+import useLocalStorage from "./hooks/useLocalStorage.js";
+import { AuthProvider } from "./LoginContext.jsx";
 
 function App() {
   const [memos, setMemos] = useLocalStorage("memos", []);
