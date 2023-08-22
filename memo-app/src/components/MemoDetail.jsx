@@ -16,11 +16,13 @@ function MemoDetail({ memo, onMemoSave, onMemoDelete }) {
         onChange={(e) => setMemoText(e.target.value)}
         readOnly={!loggedIn}
       />
-      {loggedIn && <button onClick={handleSave}>編集</button>}
       {loggedIn && (
-        <button className="delete-button" onClick={onMemoDelete}>
-          削除
-        </button>
+        <>
+          <button onClick={handleSave}>編集</button>
+          <button className="delete-button" onClick={onMemoDelete}>
+            削除
+          </button>
+        </>
       )}
     </>
   );
