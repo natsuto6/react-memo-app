@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLogin } from "../LoginContext";
+import { useLogin } from "../AuthContext";
 
 function MemoDetail({ memo, onMemoSave, onMemoDelete }) {
   const { loggedIn } = useLogin();

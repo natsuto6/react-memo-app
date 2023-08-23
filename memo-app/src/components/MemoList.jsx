@@ -1,4 +1,4 @@
-import { useLogin } from "../LoginContext.jsx";
+import { useLogin } from "../AuthContext.jsx";
 
 function MemoList({ memos, onMemoSelect, onMemoAdd }) {
   const { loggedIn, login, logout } = useLogin();
