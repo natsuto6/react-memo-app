@@ -1,7 +1,8 @@
 import { useState } from "react";
-import MemoList from "./components/MemoList";
-import MemoDetail from "./components/MemoDetail";
-import useLocalStorage from "./hooks/useLocalStorage";
+import MemoList from "./components/MemoList.jsx";
+import MemoDetail from "./components/MemoDetail.jsx";
+import useLocalStorage from "./hooks/useLocalStorage.js";
+import { AuthProvider } from "./AuthContext.jsx";
 
 function App() {
   const [memos, setMemos] = useLocalStorage("memos", []);
@@ -31,7 +32,7 @@ function App() {
   };
 
   return (
-    <>
+    <AuthProvider>
       <MemoList
         memos={memos}
         onMemoSelect={handleMemoSelect}
@@ -44,7 +45,7 @@ function App() {
           onMemoDelete={handleMemoDelete}
         />
       )}
-    </>
+    </AuthProvider>
   );
 }
 
